@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+header, footer{
+    background-color: aqua;
+    height: 15vh;
+    width: 70%;
+    margin: auto;
+}
+
+section{
+    height: 70vh;
+    width: 70%;
+    margin: auto;
+}
+
+#grid{
+    position: relative;
+}
+
+.front{
+    background-color: blue;
+    width: 100px;
+    height: 150px;
+}
+
+.back{
+    background-color: red;
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+}
