@@ -28,7 +28,10 @@ function criarCarta(time){
 }
 
 function gerarJogo(){
-    times.map((time)=>{
+    let duplicarCartas = [...times, ...times];
+    let embaralhar = duplicarCartas.sort(() => Math.random() - 0.5);
+
+    embaralhar.map((time)=>{
         const carta = criarCarta(time);      
     });
 }
