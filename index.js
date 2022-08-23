@@ -10,7 +10,7 @@ times = ['atleti',
 'tottenham',
 'united']
 
-function criarCarta(){
+function criarCarta(time){
     const carta = document.createElement('div');
     const front = document.createElement('div');
     const back = document.createElement('div');
@@ -22,7 +22,15 @@ function criarCarta(){
     front.className = 'face front';
     back.className = 'face back';
     carta.className = 'carta';
+    
+    front.style.backgroundImage=`url(img/${time}.png)`;
 
 }
 
-criarCarta();
+function gerarJogo(){
+    times.map((time)=>{
+        const carta = criarCarta(time);      
+    });
+}
+
+gerarJogo();
