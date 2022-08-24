@@ -10,6 +10,9 @@ times = ['atleti',
 'tottenham',
 'united']
 
+let primeiraCarta = '';
+let segundaCarta ='';
+
 function criarCarta(time){
     const carta = document.createElement('div');
     const front = document.createElement('div');
@@ -23,7 +26,9 @@ function criarCarta(time){
     back.className = 'face back';
     carta.className = 'carta';
 
-    carta.addEventListener('click',()=> carta.className = 'carta virar');
+    carta.addEventListener('click', virarCarta);
+
+    carta.setAttribute('data-time', time);
     
     front.style.backgroundImage=`url(img/${time}.png)`;
 
@@ -38,3 +43,15 @@ function gerarJogo(){
     });
 }
 gerarJogo();
+
+function virarCarta({target}){
+    if(primeiraCarta === ''){
+        target.parentNode.className = 'carta virar';
+        primeiraCarta = target.parentNode;
+    }  else if(segundaCarta === ''){
+        target.parentNode.className = 'carta virar';
+        segundaCarta = target.parentNode;
+    } else{
+        return;
+    }
+}
