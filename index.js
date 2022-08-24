@@ -10,8 +10,8 @@ times = ['atleti',
 'tottenham',
 'united']
 
-let primeiraCarta = '';
-let segundaCarta ='';
+let primeiroTime = '';
+let segundoTime ='';
 
 function criarCarta(time){
     const carta = document.createElement('div');
@@ -44,14 +44,28 @@ function gerarJogo(){
 }
 gerarJogo();
 
+
 function virarCarta({target}){
-    if(primeiraCarta === ''){
-        target.parentNode.className = 'carta virar';
-        primeiraCarta = target.parentNode;
-    }  else if(segundaCarta === ''){
-        target.parentNode.className = 'carta virar';
-        segundaCarta = target.parentNode;
-    } else{
+    if(target.parentNode.className.includes('virar')){
         return;
+    } else{
+        if(primeiroTime === ''){
+            target.parentNode.className = 'carta virar';
+            primeiroTime = target.parentNode.getAttribute('data-time');
+        }  else if(segundoTime === ''){
+            target.parentNode.className = 'carta virar';
+            segundoTime = target.parentNode.getAttribute('data-time');
+        } else{
+            return;
+        }
     }
+    pontuacao();
+}
+
+function pontuacao(){
+    if(primeiroTime === segundoTime){
+        console.log('acertou');
+        primeiroTime = '';
+        segundoTime = '';
+    } 
 }
