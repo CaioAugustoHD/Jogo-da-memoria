@@ -22,6 +22,8 @@ function criarCarta(time){
     front.className = 'face front';
     back.className = 'face back';
     carta.className = 'carta';
+
+    carta.addEventListener('click',()=> carta.className = 'carta virar');
     
     front.style.backgroundImage=`url(img/${time}.png)`;
 
@@ -35,5 +37,4 @@ function gerarJogo(){
         const carta = criarCarta(time);      
     });
 }
-
 gerarJogo();

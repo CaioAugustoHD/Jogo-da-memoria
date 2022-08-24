@@ -45,12 +45,12 @@ section{
     background-repeat: no-repeat;
 }
 
-.carta:hover{
+.virar{
     transform: rotateY(180deg);
 }
 
 .front{
-    background-color: blue;
+    background-color: rgb(77, 77, 80);
     transform: rotateY(180deg);
 }
 
