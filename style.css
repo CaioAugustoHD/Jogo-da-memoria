@@ -82,6 +82,7 @@ section{
     background-color: rgb(77, 77, 80);
     transform: rotateY(180deg);
     border-radius: 5px;
+    transition: all 400ms ease;
 }
 
 .back{
@@ -89,5 +90,8 @@ section{
     background-image:url('img/faviconbola.png');
     backface-visibility: hidden;
     border-radius: 5px;
+}
 
+.acertada{
+    opacity: 0.6;
 }

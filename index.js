@@ -68,6 +68,8 @@ function virarCarta({target}){
 
 function pontuacao(){
     if(primeiroTime === segundoTime){
+        carta1.firstChild.classList.add('acertada');
+        carta2.firstChild.classList.add('acertada');
         console.log('acertou');
         primeiroTime = '';
         segundoTime = '';
