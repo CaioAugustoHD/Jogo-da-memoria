@@ -6,6 +6,14 @@
     font-family: 'Lato', sans-serif;
 }
 
+body{
+    background-image: url('img/fundojapao.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 header{
     background-color: aqua;
     height: 15vh;
@@ -14,23 +22,24 @@ header{
 }
 
 section{
-    height: 70vh;
     width: 70%;
     margin: auto;
 }
 
 #grid{
-    width: 60%;
+    width: 70%;
     margin: auto;
-    border: 1px solid black;
+    padding: 8px 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    justify-items: center;
     grid-gap: 8px;
 }
 
 .carta{
     aspect-ratio: 3/4;
-    width: 100px;
+    width: 93px;
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
@@ -52,11 +61,13 @@ section{
 .front{
     background-color: rgb(77, 77, 80);
     transform: rotateY(180deg);
+    border-radius: 5px;
 }
 
 .back{
     background-color: red;
     background-image:url('img/faviconbola.png');
     backface-visibility: hidden;
+    border-radius: 5px;
 
 }
