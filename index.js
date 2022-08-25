@@ -70,11 +70,13 @@ function pontuacao(){
     if(primeiroTime === segundoTime){
         carta1.firstChild.classList.add('acertada');
         carta2.firstChild.classList.add('acertada');
-        console.log('acertou');
         primeiroTime = '';
         segundoTime = '';
         carta1 = '';
         carta2 = '';
+        let classeAcertada = document.querySelectorAll('.acertada');
+        endGame(classeAcertada);
+        console.log(classeAcertada.length);
     } else if((primeiroTime !== segundoTime)&&(segundoTime !== '')){
         setTimeout(()=>{
             carta1.classList.remove('virar');
@@ -85,4 +87,11 @@ function pontuacao(){
             carta2 = '';
         }, 600);    
         }
+}
+
+
+function endGame(quantAcertadas){
+    if(quantAcertadas.length === 20){
+        setTimeout(() => alert('FIM'), 800);
+    }
 }
