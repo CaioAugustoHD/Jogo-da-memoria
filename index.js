@@ -1,4 +1,6 @@
 const grid = document.getElementById('grid');
+let pontuacao = document.getElementById('pontuacao');
+
 times = ['atleti',
 'barcelona',
 'bayer',
@@ -63,10 +65,10 @@ function virarCarta({target}){
             return;
         }
     }
-    pontuacao();
+    acertou();
 }
 
-function pontuacao(){
+function acertou(){
     if(primeiroTime === segundoTime){
         carta1.firstChild.classList.add('acertada');
         carta2.firstChild.classList.add('acertada');
@@ -75,6 +77,7 @@ function pontuacao(){
         carta1 = '';
         carta2 = '';
         let classeAcertada = document.querySelectorAll('.acertada');
+        pontos(classeAcertada);
         endGame(classeAcertada);
         console.log(classeAcertada.length);
     } else if((primeiroTime !== segundoTime)&&(segundoTime !== '')){
@@ -92,6 +95,11 @@ function pontuacao(){
 
 function endGame(quantAcertadas){
     if(quantAcertadas.length === 20){
-        setTimeout(() => alert('FIM'), 800);
+        setTimeout(() => alert('Parabéns!!!\nVocê venceu'), 800);
     }
+}
+
+function pontos(classeAcertada){
+    let pontosAtuais = (classeAcertada.length/2);
+    pontuacao.innerHTML = pontosAtuais;
 }
