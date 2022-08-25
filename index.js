@@ -12,6 +12,8 @@ times = ['atleti',
 
 let primeiroTime = '';
 let segundoTime ='';
+let carta1 = '';
+let carta2 = '';
 
 function criarCarta(time){
     const carta = document.createElement('div');
@@ -45,14 +47,16 @@ function gerarJogo(){
 gerarJogo();
 
 
-function virarCarta({target}){
+function virarCarta({target}){    
     if(target.parentNode.className.includes('virar')){
         return;
     } else{
         if(primeiroTime === ''){
+            carta1 = target.parentNode;
             target.parentNode.className = 'carta virar';
             primeiroTime = target.parentNode.getAttribute('data-time');
         }  else if(segundoTime === ''){
+            carta2 = target.parentNode;
             target.parentNode.className = 'carta virar';
             segundoTime = target.parentNode.getAttribute('data-time');
         } else{
@@ -67,5 +71,16 @@ function pontuacao(){
         console.log('acertou');
         primeiroTime = '';
         segundoTime = '';
-    } 
+        carta1 = '';
+        carta2 = '';
+    } else if((primeiroTime !== segundoTime)&&(segundoTime !== '')){
+        setTimeout(()=>{
+            carta1.classList.remove('virar');
+            carta2.classList.remove('virar');
+            primeiroTime = '';
+            segundoTime = '';
+            carta1 = '';
+            carta2 = '';
+        }, 600);    
+        }
 }
