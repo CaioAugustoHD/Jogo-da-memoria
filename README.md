@@ -1,4 +1,4 @@
-<h1 align="center">JOGO DA MEMÓRIA</h1>
+<h1 align="center">Jogo da memória</h1>
 <p align="center">Projeto de jogo da memória com o tema de times internacionais, usando apenas HTML, CSS e JavaScript</p>
 
 ---
@@ -22,7 +22,7 @@ Esse projeto foi um desafio concluído em 5 dias, cada dia era uma parte do jogo
 
 
 ## Funcionalidades
-As principais funcionalidades do projeto é:
+As principais funcionalidades do projeto são:
 
 ✅ Jogo da memória composto por 20 cartas;
 
