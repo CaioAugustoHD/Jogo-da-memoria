@@ -18,15 +18,18 @@
 
 
 ## Sobre
-Esse projeto foi um desafio concluído em 5 dias, cada dia era uma parte do jogo feita, e que durante esse período, ampliei ainda mais meus conhecimentos nessas técnologias.
+Esse projeto foi um desafio concluído em 5 dias, cada dia foi feita uma parte do jogo. Além do objetivo de programar meu primeiro game, foi fundamental para meu aprendizado de vários conceitos do JavaScript.
 
 
 ## Funcionalidades
 As principais funcionalidades do projeto são:
 
-✅ Jogo da memória composto por 20 cartas;
+✅ Jogo da memória composto por 20 cartas com o tema de times internacionais;
 
-✅ Contador que indica a pontuação do jogador.
+✅ Contador que indica a pontuação do jogador;
+
+✅ Cada vez que o jogo é reiniciado, as cartas são embaralhadas.
+
 
 ## Tecnologias
 * HTML5
@@ -52,7 +55,7 @@ Para abrir o jogo, basta apenas o uso de um navegador de sua preferência.
 
 
 ## Links
-* Jogar: https://jogo-da-memoria-times.netlify.app/
+* Demo: https://jogo-da-memoria-times.netlify.app/
 * Repositório: https://github.com/CaioAugustoHD/Jogo-da-memoria
 
 
